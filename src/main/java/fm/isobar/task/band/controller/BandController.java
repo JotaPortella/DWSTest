@@ -22,7 +22,7 @@ public class BandController {
   @Autowired private AlbumService albumService;
 
   @GetMapping("select")
-  public List<BandDtoList> getAll(BandFilter bandFilter) {
+  public List<BandDtoList> getAll(@RequestBody BandFilter bandFilter) {
     return bandService.getAll(bandFilter);
   }
 
